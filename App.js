@@ -16,7 +16,8 @@ class App extends Component {
       return(  <View style = {styles.Header}>
         <StatusBar
             backgroundColor="#1c313a"
-            barStyle = "light-content"/>
+            barStyle = "light-content"
+            />
              <Home/>
       </View>);
     
@@ -25,7 +26,8 @@ class App extends Component {
       return(  <View style = {styles.Header}>
         <StatusBar
             backgroundColor="#1c313a"
-            barStyle = "light-content"/>
+            barStyle = "light-content"
+            />
              <Loginform/>
       </View>);
     
@@ -44,7 +46,6 @@ const styles = StyleSheet.create({
 
   },
   Header:{
-    marginTop:10,
     flex:1,
     backgroundColor:'#12515E'
   },

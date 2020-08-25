@@ -16,17 +16,16 @@ export default class Home extends Component {
 
                     });
 
-
   }
 
   render() {
 
       return (
         <Container>
-          <Header>
+          <Header style={{backgroundColor:"#254478"}}>
             <Left/>
-            <Body>
-              <Title>Header</Title>
+            <Body >
+              <Title >Header</Title>
             </Body>
             <Right>
             <Button transparent>
@@ -35,21 +34,19 @@ export default class Home extends Component {
             </Right>
           </Header>
          
-          <Tabs style = {styles.Tabs}>
+                  <Tabs>
+                          <Tab heading={ <TabHeading style={{backgroundColor:"#254478"}}><Icon name="camera" style={{color:"#ffffff"}}/><Text style={{marginLeft:5,color:"#ffffff"}} >Camera</Text></TabHeading>}/>
+                          <Tab heading={ <TabHeading style={{backgroundColor:"#254478"}}><Icon name="person" style={{color:"#ffffff"}}/><Text style={{marginLeft:5,color:"#ffffff"}} >Chat</Text></TabHeading>}/>
+                          <Tab heading={ <TabHeading style={{backgroundColor:"#254478"}}><Icon name="camera" style={{color:"#ffffff"}}/><Text style={{marginLeft:5,color:"#ffffff"}} >Call</Text></TabHeading>}/>
+                  </Tabs>
           
-            <Tab heading={ <TabHeading><Icon name="camera" /><Text>Camera</Text></TabHeading>}/>
-            <Tab heading={ <TabHeading><Icon name="person" /><Text>Chat</Text></TabHeading>}/>
-            <Tab heading={ <TabHeading><Icon name="camera" /><Text>Call</Text></TabHeading>}/>
-         
-          
-        </Tabs>
+       
                   <View style = {styles.Header}>
-          
                           <Text style = {{fontSize:20,margin:20,color:"#000000"}}>Hello ! Welcome to home page ! {Userstore.username}</Text>
                           <Button block info onPress = {this.logout}>
                                       <Text>Logout</Text>
                           </Button>
-                </View>
+                  </View>
           </Container>
       );
 
@@ -64,7 +61,8 @@ const styles = StyleSheet.create({
         margin:5
       },
       Tabs:{
-        backfaceVisibility:'visible'
+        backfaceVisibility:'visible',
+        backgroundColor:"#ffffff"
        
       }
 });
