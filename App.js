@@ -3,7 +3,12 @@ import {View,StyleSheet,StatusBar,Image} from 'react-native';
 import Loginform from './components/Loginform';
 import {observer}     from 'mobx-react'
 import Home from './components/Home';
+import storage from '@react-native-firebase/storage';
 import UserStore from './android/src/Userstore';
+import firebase from 'firebase/app';
+
+firebase.initializeApp('./android/app/google-services.json');
+
 class App extends Component {
 
 
@@ -35,6 +40,7 @@ class App extends Component {
   }
 }
 export default observer(App);
+export {storage,firebase as defualt};
 const styles = StyleSheet.create({
   Container:{
     flexGrow: 1,

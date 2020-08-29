@@ -14,6 +14,8 @@ target 'LoginApp' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNFBDatabase', :path => '../node_modules/@react-native-firebase/database'
+
   target 'LoginAppTests' do
     inherit! :complete
     # Pods for testing
